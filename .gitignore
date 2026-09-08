@@ -1,0 +1,21 @@
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary & Log files
+*.tmp
+*.log
+*.bak
+.migrated
+
+# Dynamic Antigravity session caches
+projects/
+scratch/
+
+# Dependencies
+node_modules/
+
+# Local personal overrides
+local_settings.json

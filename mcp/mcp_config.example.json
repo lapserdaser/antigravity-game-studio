@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "roblox-studio": {
+      "command": "node",
+      "args": [
+        "%LOCALAPPDATA%\\Roblox\\roblox_mcp_proxy.js"
+      ],
+      "disabled": true
+    },
+    "godot": {
+      "command": "node",
+      "args": [
+        "%APPDATA%\\npm\\node_modules\\@satelliteoflove\\godot-mcp\\dist\\cli.js"
+      ],
+      "disabled": false
+    },
+    "blender": {
+      "command": "uvx",
+      "args": [
+        "blender-mcp"
+      ],
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "disabled": true
+    }
+  }
+}

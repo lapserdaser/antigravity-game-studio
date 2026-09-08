@@ -1,0 +1,2 @@
+# Browser Allowlist
+# Add one URL pattern per line
