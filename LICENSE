@@ -1,21 +1,40 @@
-MIT License
+Custom Source-Available License (All Rights Reserved)
 
-Copyright (c) 2026 Denis
+Copyright (c) 2026 Denis. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository and its contents (including all rules, prompts, agent definitions,
+skills, scripts, configurations, and documentation) are made available strictly
+for viewing, educational, and personal evaluation purposes on GitHub.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. RESERVATION OF RIGHTS:
+All intellectual property rights, titles, and interests in and to the Software
+remain exclusively with the Copyright Holder (Denis).
 
+2. PROHIBITED USES:
+Without express prior written permission from the Copyright Holder, you may NOT:
+- Copy, adapt, modify, translate, reverse engineer, or create derivative works
+  based on this repository or any of its components.
+- Distribute, publish, sublicense, rent, lease, sell, or otherwise transfer any
+  part of this Software or its derivatives.
+- Use, integrate, or embed this Software, rules, or skills in commercial products,
+  commercial games, AI services, SaaS platforms, or monetized workflows.
+- Claim ownership or remove any copyright notices from the materials.
+
+3. PERMITTED USES:
+You are granted a non-exclusive, revocable license solely to:
+- View and inspect the code and documentation publicly hosted on GitHub.
+- Fork the repository strictly within GitHub as permitted by GitHub's Terms of
+  Service, retaining all copyright notices and without granting any additional
+  licenses to third parties.
+
+4. COMMERCIAL INQUIRIES & PERMISSIONS:
+For licensing inquiries, commercial use permissions, or partnership requests,
+please contact the author through GitHub (https://github.com/lapserdaser).
+
+5. DISCLAIMER:
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
