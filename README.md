@@ -69,15 +69,23 @@
 
 ---
 
-## 🛠️ Специализированные скилы (Skills)
+## 🛠️ Специализированные скилы студии (Skills)
 
 | Название скила | Директория | Назначение и функционал |
 |---|---|---|
-| **godot-3d-pipeline** | [`skills/godot-3d-pipeline`](skills/godot-3d-pipeline/) | Комплексный 3D-пайплайн для Godot: автоматизация импорта GLTF/OBJ, процедурные скрипты генерации моделей через Blender в headless-режиме, сборка сцен `.tscn`, CSG-блокауты уровней, настройка коллизий и PBR-материалов. |
-| **godot-mcp** | [`skills/godot-mcp`](skills/godot-mcp/) | Пакетное взаимодействие с движком Godot 4 через Model Context Protocol: инспекция дерева нод в рантайме, запуск тестовых сценариев и автоматизированное редактирование сцен с жесткой экономией квот. |
-| **project-indexer** | [`skills/project-indexer`](skills/project-indexer/) | Автономное построение архитектурного манифеста `PROJECT_INDEX.md` за 1 шаг без расхода токенов через локальный сверхбыстрый AST-сканер `fast_indexer.py`. |
-| **token-economy** | [`skills/token-economy`](skills/token-economy/) | Протоколы максимальной экономии контекста и квот модели: строгий бан избыточных браузерных агентов, PowerShell scratch-паттерн, маркерное чтение файлов и Fail-Fast лимиты. |
-| **yandex-games-draft** | [`skills/yandex-games-draft`](skills/yandex-games-draft/) | Строгий регламент и чеклисты подготовки игр к релизу на платформе Яндекс Игры: интеграция Yandex SDK, реклама (Fullscreen, Rewarded Video, Sticky баннеры), лидерборды, покупки и оптимизация под WebGL/HTML5. |
+| **agent-modes** | [`skills/agent-modes`](skills/agent-modes/) | Автономный селектор операционных режимов: `EXPLORER` (исследование), `BUILDER` (разработка), `QA_CHALLENGER` (стресс-тесты), `LEAN_PATCHER` (точечные патчи), `FORENSIC_AUDITOR` (аудит заглушек). |
+| **blender-mcp-expert** | [`skills/blender-mcp-expert`](skills/blender-mcp-expert/) | Стандарт студии по 3D-моделированию через Blender MCP: обязательный поиск CC0-ассетов, китбашинг, аудит сетки и экспорт Game-Ready (.glb). |
+| **dream-loop** | [`skills/dream-loop`](skills/dream-loop/) | Закрытый цикл визуального ревью для 3D: «Dream → Build → Capture → Critique → Refine» под контролем Арт-директора с лимитом 3 итерации. |
+| **godot-3d-pipeline** | [`skills/godot-3d-pipeline`](skills/godot-3d-pipeline/) | Комплексный 3D-пайплайн для Godot: импорт GLTF/OBJ, сборка сцен `.tscn`, CSG-блокауты уровней, настройка коллизий и PBR-материалов. |
+| **godot-architecture** | [`skills/godot-architecture`](skills/godot-architecture/) | Стандарт архитектуры Godot 4: Zero-Hardcode, Resource-Driven подход, типизированные `@export`, кривые `Curve`, Scene Unique Nodes (`%Node`). |
+| **godot-mcp** | [`skills/godot-mcp`](skills/godot-mcp/) | Пакетное взаимодействие с движком Godot 4 через MCP: инспекция дерева нод в рантайме, запуск тестов и редактирование сцен с жесткой экономией квот. |
+| **obsidian-studio** | [`skills/obsidian-studio`](skills/obsidian-studio/) | Интеграция с Obsidian Vault через CLI: ведение GDD, лор-библий, дизайн-систем, задач и базы знаний студии. |
+| **project-indexer** | [`skills/project-indexer`](skills/project-indexer/) | Автономное построение архитектурного манифеста `PROJECT_INDEX.md` за 1 шаг без расхода токенов через локальный AST-сканер `fast_indexer.py`. |
+| **reverse-gdd** | [`skills/reverse-gdd`](skills/reverse-gdd/) | Автоматический реверс-инжиниринг существующих кодовых баз (Godot, Unity, C#, GDScript, Luau) в связанную базу знаний Obsidian с Mermaid-диаграммами. |
+| **scenario-editor** | [`skills/scenario-editor`](skills/scenario-editor/) | Развертывание субагента «Нарративный дизайнер / Сценарист» (`narrative_designer`) для глубокого анализа и редактуры сценариев, сюжетов и квестов. |
+| **token-economy** | [`skills/token-economy`](skills/token-economy/) | Протоколы максимальной экономии контекста и квот модели: scratch-паттерны, маркерное чтение файлов, On-Demand Indexing и Fail-Fast лимиты. |
+| **universal-modder** | [`skills/universal-modder`](skills/universal-modder/) | Профессиональный пайплайн создания модов, реверс-инжиниринга и внедрения мод-лоадеров для ПК-игр. |
+| **yandex-games-draft** | [`skills/yandex-games-draft`](skills/yandex-games-draft/) | Строгий регламент и чеклисты подготовки игр к релизу на Яндекс Играх: SDK, реклама (Fullscreen, Rewarded, Sticky), лидерборды и WebGL-оптимизация. |
 
 ---
 

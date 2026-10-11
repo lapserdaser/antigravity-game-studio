@@ -18,7 +18,7 @@ description: >-
 * **СТРОГО ЗАПРЕЩЕНО**: Редактировать или создавать сложные 3D-меши, иерархии нод с трансформами и CSG вручную через слепую правку текстового формата `.tscn`.
 * **Причина**: Текстовые координаты не валидируются движком. Это приводит к битым нормалям (невидимые полигоны), несовпадению коллизий с визуалом, смещенным пивотам (модель тонет в полу) и краху локальных идентификаторов (`ext_resource`/`sub_resource`).
 * **Стандарт студии**:
-  1. **Геометрия**: Модели создаются через **Blender MCP** (`execute_blender_code` / скачивание ассетов) $\rightarrow$ экспорт в `.glb` в `res://assets/models/`.
+  1. **Геометрия**: Загрузка готовых CC0 `.glb` ассетов (`bx_cc0_sourcing`) либо нативный CSG-блокаут в Godot (`CSGBox3D`, `CSGCombiner3D`). Процедурный `bpy`-код разрешен исключительно как параметрический чертежный Fallback (`bx_reference_math.py`) при отсутствии готовых моделей.
   2. **Сборка префаба `.tscn`**: Сцена собирается и сохраняется средствами самого движка Godot через `EditorScript` ([assemble_scene.gd](./scripts/assemble_scene.gd)) либо через атомарные команды Godot MCP.
   3. **Верификация**: Обязательный вызов `godot_validate_meshes` и `godot_scene3d(action: "get_bounds")`.
 
@@ -38,16 +38,10 @@ description: >-
 
 ## 3. Рабочие сценарии (Workflows)
 
-### Сценарий А: Создание 3D-модели через Blender MCP
-1. Написать параметрический Python-скрипт для Blender (см. шаблон в [blender_prop_template.py](./examples/blender_prop_template.py)).
-2. Выполнить скрипт через `call_mcp_tool(ServerName: "blender", ToolName: "execute_blender_code", Arguments: {code: "..."})`.
-3. В скрипте:
-   * Построить геометрию с правильными размерами.
-   * Добавить модификатор `Bevel` (скругление фасок) и сделать авто-развертку UV (`bpy.ops.uv.smart_project()`).
-   * Сместить Origin в нижнюю точку меша: `bpy.ops.object.origin_set(type='ORIGIN_CURSOR')`.
-   * Экспортировать в формате glTF/GLB напрямую в папку проекта Godot:
-     `bpy.ops.export_scene.gltf(filepath=".../res/assets/models/prop_name.glb", export_format='GLB')`.
-4. Сделать проверочный скриншот во вьюпорте через `get_viewport_screenshot` (если доступен) для подтверждения визуала.
+### Сценарий А: Получение 3D-модели (CC0 Sourcing / Godot CSG)
+1. **Приоритет 1 (Готовые модели)**: Поиск проверенных CC0 / Public Domain моделей в сети (Kenney, Poly Haven, Khronos, Poly Pizza) через `search_web` и загрузка в `res://assets/models/` через `bx_cc0_sourcing.py`.
+2. **Приоритет 2 (Прототипирование и блокаут)**: Создание геометрии нативно внутри Godot через `CSGBox3D`, `CSGCylinder3D`, `CSGCombiner3D` или примитивные `MeshInstance3D` без привлечения Blender.
+3. **Параметрический Fallback**: Если готовых моделей нет и CSG недостаточен, допустима параметрическая чертежная сборка в Blender через `bx_reference_math.py`. Слепое процедурное кодирование мешей «из головы» запрещено.
 
 ### Сценарий Б: Сборка сцены префаба (.tscn) в Godot
 1. Использовать пакетный `EditorScript` ([assemble_scene.gd](./scripts/assemble_scene.gd)).
@@ -56,6 +50,7 @@ description: >-
    * Рассчитывает честный габаритный контейнер (AABB).
    * Автоматически создает правильный `CollisionShape3D` (BoxShape3D или ConvexPolygonShape3D) строго по AABB меша.
    * Добавляет необходимые точки крепления (`Marker3D` для спавна пуль, экипировки, камеры).
+   * Назначает дефолтные материалы, слои коллизий и ресурсы строго по стандарту `godot-architecture` (Out-of-the-Box Ready).
    * Упаковывает сцену через `PackedScene.pack()` и сохраняет через `ResourceSaver.save()`.
 
 ### Сценарий В: Контроль качества (Quality Gate)

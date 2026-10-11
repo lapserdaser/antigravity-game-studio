@@ -1,8 +1,9 @@
 import bpy
 import os
 
-# Шаблон процедурного создания 3D-пропса в Blender через Blender MCP
-# Выполняется через execute_blender_code
+# [FALLBACK ONLY] Шаблон процедурного создания 3D-пропса в Blender через Blender MCP
+# Применяется ИСКЛЮЧИТЕЛЬНО как Fallback при отсутствии готовых CC0 моделей (bx_cc0_sourcing)
+# и невозможности сделать блокаут через Godot CSG. Выполняется через execute_blender_code.
 
 def create_prop(output_glb_path: str):
     # 1. Очистка дефолтной сцены

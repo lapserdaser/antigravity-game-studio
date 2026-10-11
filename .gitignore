@@ -19,3 +19,8 @@ node_modules/
 
 # Local personal overrides
 local_settings.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
