@@ -142,13 +142,14 @@ Follow the BUILDER mode guidelines strictly.
   3. Соблюдать правила `token-economy`: чтение строго по формуле «Шапка + Метод» (1..45 строки заголовка + окрестность целевого метода).
 
 ### 3. Команда `/teamwork-preview` (Autonomous Subagent Swarm)
-* **Активируемый режим**: `SWARM_ORCHESTRATOR`.
+* **Активируемый режим**: `SWARM_ORCHESTRATOR` (Tier 2 Lean Swarm).
 * **Алгоритм работы**:
-  1. Зарегистрировать типизированных субагентов через `define_subagent`:
-     - `studio_architect` (Read-only контрактник);
-     - `studio_builder` (Разработчик фичи по Zero-Hardcode стандарту);
-     - `studio_qa_challenger` (Тестировщик и валидатор хардкода).
-  2. **Domain Partitioning**: Назначить каждому субагенту строго изолированный путь каталога (никакой одновременной правки одного файла разными субагентами).
-  3. Для масштабных параллельных изменений использовать параметр `Workspace: 'branch'`.
-  4. Сборка и верификация общего результата производятся Оркестратором через обязательный запуск `audit_zero_hardcode.py` и headless-тестов перед финальной сдачей.
+  1. Инициализировать координационный стейт через скилл `studio-blackboard` (`python skills/studio-blackboard/scripts/blackboard_manager.py init`).
+  2. Задействовать типизированных субагентов с Model Routing:
+     - `gameplay_dev` (модель `flash` — реализация Zero-Hardcode логики);
+     - `qa_challenger` (модель `flash_lite` — независимый аудит и стресс-тесты);
+     - `asset_artist_3d` (модель `flash` — CC0 Sourcing и Blender MCP).
+  3. **Blackboard Handover**: Обмен задачами и диффами происходит строго через `scratch/session_blackboard.json` (никакого спама историей чата).
+  4. **Domain Partitioning**: Назначить каждому субагенту строго изолированный путь каталога (никакой одновременной правки одного файла разными субагентами). Для параллельных изолированных веток использовать `Workspace: 'branch'`.
+  5. Сборка и верификация общего результата производятся Оркестратором через `blackboard_manager.py status` и обязательный запуск `audit_zero_hardcode.py` перед финальной сдачей.
 

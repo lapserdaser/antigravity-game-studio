@@ -83,6 +83,7 @@
 | **project-indexer** | [`skills/project-indexer`](skills/project-indexer/) | Автономное построение архитектурного манифеста `PROJECT_INDEX.md` за 1 шаг без расхода токенов через локальный AST-сканер `fast_indexer.py`. |
 | **reverse-gdd** | [`skills/reverse-gdd`](skills/reverse-gdd/) | Автоматический реверс-инжиниринг существующих кодовых баз (Godot, Unity, C#, GDScript, Luau) в связанную базу знаний Obsidian с Mermaid-диаграммами. |
 | **scenario-editor** | [`skills/scenario-editor`](skills/scenario-editor/) | Развертывание субагента «Нарративный дизайнер / Сценарист» (`narrative_designer`) для глубокого анализа и редактуры сценариев, сюжетов и квестов. |
+| **studio-blackboard** | [`skills/studio-blackboard`](skills/studio-blackboard/) | Движок координации бережливых субагентов (Lean Swarm) через разделяемый файл состояния `scratch/session_blackboard.json` с Model Routing и Loop Guard. |
 | **token-economy** | [`skills/token-economy`](skills/token-economy/) | Протоколы максимальной экономии контекста и квот модели: scratch-паттерны, маркерное чтение файлов, On-Demand Indexing и Fail-Fast лимиты. |
 | **universal-modder** | [`skills/universal-modder`](skills/universal-modder/) | Профессиональный пайплайн создания модов, реверс-инжиниринга и внедрения мод-лоадеров для ПК-игр. |
 | **yandex-games-draft** | [`skills/yandex-games-draft`](skills/yandex-games-draft/) | Строгий регламент и чеклисты подготовки игр к релизу на Яндекс Играх: SDK, реклама (Fullscreen, Rewarded, Sticky), лидерборды и WebGL-оптимизация. |
